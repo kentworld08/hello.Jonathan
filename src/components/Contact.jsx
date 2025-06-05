@@ -15,6 +15,10 @@ export const contactSchema = z.object({
   message: z.string().min(1, "Message is required"),
 });
 
+const publicKey = import.meta.env.VITE_EMAILJS_PUBLIC_KEY;
+const serviceId = import.meta.env.VITE_EMAILJS_SERVICE_ID;
+const templateId = import.meta.env.VITE_EMAILJS_TEMPLATE_ID;
+
 const Contact = () => {
   const formRef = useRef();
   const [loading, setLoading] = useState(false);
@@ -32,8 +36,8 @@ const Contact = () => {
     setLoading(true);
     emailjs
       .send(
-        "service_ly73i25",
-        "template_b6dofsq",
+        serviceId,
+        templateId,
         {
           from_name: data.name,
           to_name: "Jonathan",
@@ -41,7 +45,7 @@ const Contact = () => {
           to_email: "kent93226@gmail.com",
           message: data.message,
         },
-        "9VtpCbI0MzUDYMaR5"
+        publicKey
       )
       .then(
         () => {
