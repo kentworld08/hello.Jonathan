@@ -75,10 +75,10 @@ const Works = () => {
           variants={fadeIn("", "", 0.1, 1)}
           className="mt-3 text-secondary text-[17px] max-w-3xl leading-[30px]"
         >
-          Here's a selection of projects that showcase my skills in web
-          development. Each project is briefly described with links to code
-          repositories and live demo in it. It highlights different aspects of
-          my process from problem solving and design to development and
+          Here's a selection of projects that showcase my web development
+          skills. Each project includes a brief description, along with links to
+          the code repository and a live demo. They highlight various aspects of
+          my process from problem-solving and design to development and
           delivery.
         </motion.p>
       </div>
